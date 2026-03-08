@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent, #FFD700);
+  transition: color 0.5s ease;
+}
+
+.webcam-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid var(--accent, #FFD700);
+  transition: border-color 0.5s ease;
+}
+
+.webcam {
+  width: 480px;
+  height: 360px;
+  display: block;
+}
+
+.emotion-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  transition: background 0.5s ease;
+}
+
+.controls {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn-start {
+  background: #00c853;
+  color: #fff;
+}
+
+.btn-stop {
+  background: #ff1744;
+  color: #fff;
+}
+
+.btn-manual {
+  background: var(--accent, #FFD700);
+  color: #000;
+}
+
+.loading {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0.5rem 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.tracks-container {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.tracks-container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  transition: color 0.5s ease;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.track-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #333;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.track-card:hover {
+  border-color: var(--accent, #FFD700);
+  transform: translateX(4px);
+}
+
+.track-thumb {
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-title {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.track-channel {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.play-icon {
+  font-size: 1.2rem;
+  color: var(--accent, #FFD700);
+}
